@@ -19,7 +19,7 @@ df = pd.DataFrame(data)
 # df2 = pd.DataFrame(np.random.randn(5, 4), index=daty, columns=list('ABCD'))
 # print(df2)
 
-df3 = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
+# df3 = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
 # print(df3)
 
 # xlsx = pd.ExcelFile('datasets/imiona.xlsx')
@@ -63,27 +63,28 @@ df3 = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
 # s['e'] = 14
 # print(s)
 
-# df.loc[3] = 'nowy element'
-# df.loc[4] = ['Polska', 'Warszawa', 38675467]
+df.loc[3] = 'nowy element'
+df.loc[4] = ['Polska', 'Warszawa', 38675467]
 # print(df)
 
 # new = df.drop([3])
 # print(new)
 
-# df.drop([3], inplace=True)
+df.drop([3], inplace=True)
 # print(df)
 
-# df['Kontynent'] = ['Europa', 'Azja', 'Ameryka Południowa', 'Europa']
+df['Kontynent'] = ['Europa', 'Azja', 'Ameryka Południowa', 'Europa']
 # print(df)
 
-# df.sort_values(by='Populacja', ascending=False, inplace=True)
-# print(df)
+df.sort_values(by='Populacja', ascending=False, inplace=True)
+print(df)
 
 # grupa = df.groupby(by='Kontynent')
+# print(grupa)
 # print(grupa.get_group('Europa'))
 
-# grupa = df.groupby('Kontynent').agg({'Populacja': ['sum']})
-# print(grupa)
+grupa = df.groupby('Kontynent').agg({'Populacja': ['sum']})
+print(grupa)
 
 # grupa.plot(kind='bar', xlabel='Kontynent', ylabel='Populacja w mld', rot=0, title='Populacja na kontynentach')
 
@@ -102,8 +103,8 @@ df3 = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
 # plt.legend(loc='upper left')
 # plt.show()
 
-seria = pd.Series(np.random.randn(1000))
-seria = seria.cumsum()
+# seria = pd.Series(np.random.randn(1000))
+# seria = seria.cumsum()
 
-seria.plot()
-plt.show()
+# seria.plot()
+# plt.show()
